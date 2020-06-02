@@ -1,4 +1,4 @@
-export const shop = (state = [], action) => {
+export const exchange = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TRANSACTION':
 
