@@ -6,7 +6,7 @@ function CurrentValue() {
     <div className="setValues">
       <h2>Set current value</h2>
       <div className="form">
-        <label for="currencyValue">1 Euro = </label>
+        <label htmlFor="currencyValue">1 Euro = </label>
         <input
           type="number"
           id="currencyValue"
