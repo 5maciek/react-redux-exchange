@@ -1,46 +1,43 @@
 main {
-    margin-left: 70px;
-    
-       
+  margin-left: 70px;
 
-    div.listTransaction {
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap; 
+  div.listTransaction {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-        li {
-            display: flex;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            padding: 5px;
-            background-color: rgba(255,255,255, 0.8);
-            width: 45%;
-            border-radius: 10px;
+    li {
+      display: flex;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 45%;
+      border-radius: 10px;
 
-            span{
-                margin-left: 10px;
-            }
+      span {
+        margin-left: 10px;
+      }
 
-            p {
-                margin-left: 15px;
-            }
+      p {
+        margin-left: 15px;
+      }
 
-            p.name{
-                margin-right: 15px;
-            }
+      p.name {
+        margin-right: 15px;
+      }
 
-            button {
-                align-self: flex-end;
-                font-weight: bold;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                margin-left: auto;
-                margin-right: 10px;
-                cursor: pointer;
-            }
-        }
+      button {
+        align-self: flex-end;
+        font-weight: bold;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: 10px;
+        cursor: pointer;
+      }
     }
+  }
 }
-

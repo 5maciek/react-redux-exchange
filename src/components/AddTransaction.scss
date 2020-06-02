@@ -1,58 +1,56 @@
-div.addTransaction{
-    width: 380px;    
+div.addTransaction {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 1.7rem;
+    margin: 10px 0 15px 0;
+    align-self: center;
+  }
+
+  .form {
     display: flex;
     flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
-    background-color: white;    
-    border: 2px solid gray;
-    border-radius: 10px;    
+    align-content: center;
+    align-items: center;
+    font-size: 0.9rem;
 
-    h2 {
-        font-size: 1.7rem;
-        margin: 10px 0 15px 0;
-        align-self: center;
+    .inputName {
+      label {
+        margin-right: 10px;
+      }
+
+      input {
+        // width: 90px;
+        font-size: 1.3rem;
+      }
     }
 
-    .form {        
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        font-size: 0.9rem;
+    .inputValue {
+      align-self: flex-start;
+      margin-left: 40px;
+      label {
+        margin-right: 10px;
+      }
 
-        .inputName {        
-            label {
-                margin-right: 10px;              
-            }
-
-            input {        
-                // width: 90px;    
-                font-size: 1.3rem;        
-            }
-        }
-
-        .inputValue {        
-            align-self: flex-start;
-            margin-left: 40px;
-            label {
-                margin-right: 10px;              
-            }
-
-            input {        
-                width: 90px;    
-                font-size: 1.3rem;        
-            }
-        }
-
+      input {
+        width: 90px;
+        font-size: 1.3rem;
+      }
     }
+  }
 
-    button.add {       
-        align-self: center; 
-        margin: 15px 0;
-        padding: 5px 10px;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
+  button.add {
+    align-self: center;
+    margin: 15px 0;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
 }

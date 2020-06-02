@@ -1,34 +1,32 @@
-div.highTransaction{
-    width: 380px;    
+div.highTransaction {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 1.7rem;
+    margin: 10px 0 15px 0;
+    align-self: center;
+  }
+
+  .form {
     display: flex;
-    flex-direction: column;   
-    background-color: white;    
-    border: 2px solid gray;
-    border-radius: 10px;    
+    flex-direction: column;
+    font-size: 0.9rem;
 
-    h2 {
-        font-size: 1.7rem;
-        margin: 10px 0 15px 0;
-        align-self: center;
+    div {
+      margin: 5px 10px;
     }
 
-    .form {        
-        display: flex;
-        flex-direction: column;              
-        font-size: 0.9rem;
-
-        div{
-            margin: 5px 10px;
-        }
-
-        p {
-            display: inline-block;
-        }
-
-        p.description {
-            margin-right: 10px;
-
-        }
-
+    p {
+      display: inline-block;
     }
+
+    p.description {
+      margin-right: 10px;
+    }
+  }
 }

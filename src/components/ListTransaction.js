@@ -1,13 +1,13 @@
 import React from 'react';
-import ItemTransaction from './ItemTransaction.js'
-import './ListTransaction.scss'
+import ItemTransaction from './ItemTransaction.js';
+import './ListTransaction.scss';
 
 function ListTransaction() {
-    return (
-        <div className="listTransaction">
-           <ItemTransaction />
-        </div>
-    );
+  return (
+    <div className="listTransaction">
+      <ItemTransaction />
+    </div>
+  );
 }
 
 export default ListTransaction;

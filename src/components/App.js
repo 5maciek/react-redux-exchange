@@ -1,10 +1,10 @@
 import React from 'react';
-import CurrentValue from './CurrentValue'
-import AddTransaction from './AddTransaction'
-import HighTransaction from './HighTransaction'
-import ListTransaction from './ListTransaction'
-import TotalTransaction from './TotalTransaction'
-import './App.scss'
+import CurrentValue from './CurrentValue';
+import AddTransaction from './AddTransaction';
+import HighTransaction from './HighTransaction';
+import ListTransaction from './ListTransaction';
+import TotalTransaction from './TotalTransaction';
+import './App.scss';
 
 function App() {
   return (
