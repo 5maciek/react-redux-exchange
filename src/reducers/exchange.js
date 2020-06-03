@@ -8,7 +8,8 @@ export const exchange = (state = INITIAL_STATE, action) => {
     case 'ADD_TRANSACTION':
       return { ...state, transactions: [...state.transactions, action.item] };
     case 'REMOVE_TRANSACTION':
-      return { ...state, transactions: [...state.transactions, action.item] };
+      const filteredTransactions = state.transactions.filter(item => item.id !== action.id);
+      return { ...state, transactions: filteredTransactions };
     default:
       return state;
   }
