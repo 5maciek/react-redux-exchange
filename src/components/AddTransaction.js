@@ -13,7 +13,7 @@ function AddTransaction(props) {
     const transaction = {
       id: uuidv1(),
       name: inputName,
-      euroAmount: euroAmount.toFixed(2),
+      euroAmount: parseFloat(euroAmount.toFixed(2)),
       plnAmount: parseFloat(amountInPLN.toFixed(2)),
     };
     props.add_Item(transaction);
