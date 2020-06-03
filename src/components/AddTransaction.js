@@ -7,13 +7,13 @@ import './AddTransaction.scss';
 function AddTransaction(props) {
   const [inputName, setInputName] = useState('');
   const [euroAmount, setEuroAmount] = useState(0);
-
+  
   const handleAddTransaction = () => {
-    const amountInPLN = euroAmount * 4.32;
+    const amountInPLN = euroAmount * props.items.currentCurrencyValue;
     const transaction = {
       id: uuidv1(),
       name: inputName,
-      euroAmount: euroAmount,
+      euroAmount: euroAmount.toFixed(2),
       plnAmount: parseFloat(amountInPLN.toFixed(2)),
     };
     props.add_Item(transaction);
