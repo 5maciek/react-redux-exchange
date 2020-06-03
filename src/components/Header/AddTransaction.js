@@ -7,18 +7,23 @@ import './AddTransaction.scss';
 function AddTransaction(props) {
   const [inputName, setInputName] = useState('');
   const [euroAmount, setEuroAmount] = useState(0);
-  
+
   const handleAddTransaction = () => {
-    const amountInPLN = euroAmount * props.transactions.currentCurrencyValue;
-    const transaction = {
-      id: uuidv1(),
-      name: inputName,
-      euroAmount: parseFloat(euroAmount.toFixed(2)),
-      plnAmount: parseFloat(amountInPLN.toFixed(2)),
-    };
-    props.add_Item(transaction);
-    setInputName('');
-    setEuroAmount(0);
+    if (inputName && euroAmount) {
+      const amountInPLN = euroAmount * props.transactions.currentCurrencyValue;
+      const transaction = {
+        id: uuidv1(),
+        name: inputName,
+        euroAmount: parseFloat(euroAmount.toFixed(2)),
+        plnAmount: parseFloat(amountInPLN.toFixed(2)),
+      };
+      props.add_Item(transaction);
+      setInputName('');
+      setEuroAmount(0);
+    }
+    else {
+      alert('Please fill all fields');
+    }
   };
 
   return (
