@@ -1,16 +1,20 @@
 import React from 'react';
 import ItemTransaction from './ItemTransaction.js';
+import { removeItem } from '../actions';
 import { connect } from 'react-redux';
 import './ListTransaction.scss';
 
 function ListTransaction(props) {
-  const { transactions } = props.items;
-  console.log('tr', transactions);
+  const handleRemoveTransaction = (id) => {
+    props.remove_Item(id);
+  }
+
+  const { transactions } = props.items;  
   return (
     <div className="listTransaction">
       <ul>
         {transactions.map((item, index) => (
-          <ItemTransaction item={item} index={index} />
+          <ItemTransaction key={item.id} item={item} index={index} handleRemove = {handleRemoveTransaction} />
         ))}
       </ul>
     </div>
@@ -23,4 +27,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(ListTransaction);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    remove_Item: (item) => dispatch(removeItem(item)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListTransaction);
