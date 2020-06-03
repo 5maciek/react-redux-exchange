@@ -9,7 +9,7 @@ function AddTransaction(props) {
   const [euroAmount, setEuroAmount] = useState(0);
   
   const handleAddTransaction = () => {
-    const amountInPLN = euroAmount * props.items.currentCurrencyValue;
+    const amountInPLN = euroAmount * props.transactions.currentCurrencyValue;
     const transaction = {
       id: uuidv1(),
       name: inputName,
@@ -58,13 +58,13 @@ function AddTransaction(props) {
 
 const mapStateToProps = (state) => {
   return {
-    items: state,
+    transactions: state,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    add_Item: (item) => dispatch(addItem(item)),
+    add_Item: (transaction) => dispatch(addItem(transaction)),
   };
 };
 

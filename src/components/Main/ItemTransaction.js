@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ItemTransaction(props) {
-  const { id, name, euroAmount, plnAmount } = props.item;
+  const { id, name, euroAmount, plnAmount } = props.transaction;
   return (
     <li className="ItemTransaction">
       <span>{props.index + 1}</span>

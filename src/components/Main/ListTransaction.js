@@ -9,12 +9,12 @@ function ListTransaction(props) {
     props.remove_Item(id);
   }
 
-  const { transactions } = props.items;  
+  const { transactions } = props.transactions;  
   return (
     <div className="listTransaction">
       <ul>
-        {transactions.map((item, index) => (
-          <ItemTransaction key={item.id} item={item} index={index} handleRemove = {handleRemoveTransaction} />
+        {transactions.map((transaction, index) => (
+          <ItemTransaction key={transaction.id} transaction={transaction} index={index} handleRemove = {handleRemoveTransaction} />
         ))}
       </ul>
     </div>
@@ -23,13 +23,13 @@ function ListTransaction(props) {
 
 const mapStateToProps = (state) => {
   return {
-    items: state,
+    transactions: state,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    remove_Item: (item) => dispatch(removeItem(item)),
+    remove_Item: (transaction) => dispatch(removeItem(transaction)),
   };
 };
 
