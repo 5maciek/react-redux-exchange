@@ -10,8 +10,8 @@ function TotalTransaction(props) {
 
   return (
     <div className="totalTransaction">
-      <p>Total Euro:<span>{totalTransactionsInEuro}</span></p>
-      <p>Total PLN:<span>{totalTransactionsInPLN}</span></p>
+      <p className="totalName">Total Euro:<span className="totalValue">{totalTransactionsInEuro}</span></p>
+      <p className="totalName">Total Pln:<span className="totalValue">{totalTransactionsInPLN}</span></p>
     </div>
   );
 }

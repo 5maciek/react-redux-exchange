@@ -1,8 +1,5 @@
-main {
-  margin-left: 70px;
-
   div.listTransaction {
-    height: 600px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -16,16 +13,17 @@ main {
       width: 45%;
       border-radius: 10px;
 
-      span {
-        margin-left: 10px;
-      }
-
       p {
-        margin-left: 15px;
+        margin-left: 15px;        
       }
 
       p.name {
-        margin-right: 15px;
+        margin-right: 25px;
+      }
+      
+      span {
+        margin-left: 5px;
+        font-weight: 600;
       }
 
       button {
@@ -40,4 +38,3 @@ main {
       }
     }
   }
-}

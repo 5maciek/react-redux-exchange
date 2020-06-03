@@ -1,10 +1,9 @@
 div.addTransaction {
-  width: 380px;
+  width: 550px;
+  margin-left: 50px;
   display: flex;
-  flex-direction: column;
-  //justify-content: center;
-  //align-items: center;
-  background-color: white;
+  flex-direction: column;  
+  background-color: rgba(255,255,255, .95);
   border: 2px solid gray;
   border-radius: 10px;
 
@@ -14,36 +13,32 @@ div.addTransaction {
     align-self: center;
   }
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+  .form {      
     font-size: 0.9rem;
 
-    .inputName {
+    .inputForm {
+      display: flex;
+      justify-content: flex-start;
+      margin-right: 50px;
+      font-size: 1.2rem;
+
       label {
-        margin-right: 10px;
+        margin: 0 10px 0 25px;
+      }
+
+      .inputName {
+        width: 400px;        
+      }
+
+      .inputAmount {
+        width: 120px;        
       }
 
       input {
-        // width: 90px;
-        font-size: 1.3rem;
+        margin-top: 5px;
+        font-size: 1rem;
       }
-    }
-
-    .inputValue {
-      align-self: flex-start;
-      margin-left: 40px;
-      label {
-        margin-right: 10px;
-      }
-
-      input {
-        width: 90px;
-        font-size: 1.3rem;
-      }
-    }
+    }    
   }
 
   button.add {
@@ -51,6 +46,9 @@ div.addTransaction {
     margin: 15px 0;
     padding: 5px 10px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 600;    
+    background-color: rgba(0,0,0,0.8);
+    color: white;    
+    letter-spacing: 1px;    
   }
 }

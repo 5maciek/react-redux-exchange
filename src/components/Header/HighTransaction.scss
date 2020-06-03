@@ -1,8 +1,9 @@
 div.highTransaction {
-  width: 380px;
+  width: 500px;
+  margin-left: 50px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgba(255,255,255, .95);
   border: 2px solid gray;
   border-radius: 10px;
 
@@ -17,16 +18,19 @@ div.highTransaction {
     flex-direction: column;
     font-size: 0.9rem;
 
-    div {
+    div.inputValue {
       margin: 5px 10px;
-    }
-
-    p {
-      display: inline-block;
+      font-size: 1rem;
+      font-weight: bold;      
     }
 
     p.description {
-      margin-right: 10px;
+      display: inline-block;     
+      margin-right: 10px;       
     }
+
+    span{      
+      color: blue;
+    }    
   }
 }

@@ -4,13 +4,13 @@ function ItemTransaction(props) {
   const { id, name, euroAmount, plnAmount } = props.transaction;
   return (
     <li className="ItemTransaction">
-      <span>{props.index + 1}</span>
+      <span>{props.index + 1}.</span>
       <p className="name">{name}</p>
       <p>
-        Euro <span>{euroAmount}</span>
+        Euro:<span>{euroAmount}</span>
       </p>
       <p>
-        Pln <span>{plnAmount}</span>
+        Pln:<span>{plnAmount}</span>
       </p>
       <button onClick={() => props.handleRemove(id)}>X</button>
     </li>

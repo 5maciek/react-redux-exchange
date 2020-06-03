@@ -25,9 +25,10 @@ function AddTransaction(props) {
     <div className="addTransaction">
       <h2>Add transaction</h2>
       <div className="form">
-        <div className="inputName">
+        <div className="inputForm">
           <label htmlFor="nameTransaction">Name:</label>
           <input
+            className="inputName"
             type="text"
             id="nameTransaction"
             value={inputName}
@@ -35,9 +36,10 @@ function AddTransaction(props) {
             onChange={(e) => setInputName(e.target.value)}
           />
         </div>
-        <div className="inputValue">
+        <div className="inputForm">
           <label htmlFor="valueTransaction">Amount in euro:</label>
           <input
+            className="inputAmount"
             type="number"
             id="valueTransaction"
             min="0"
