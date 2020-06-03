@@ -1,5 +1,4 @@
 import React from 'react';
-import './ListTransaction.scss';
 
 function ItemTransaction(props) {
   const { id, name, euroAmount, plnAmount } = props.item;
