@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
-import { changeCurrencyValue } from '../actions';
+import { changeCurrencyValue } from '../../actions';
 import './CurrentValue.scss'
 
 function CurrentValue(props) {

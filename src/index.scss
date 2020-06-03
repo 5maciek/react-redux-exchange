@@ -19,3 +19,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div.App {
+  header {
+    display: flex;
+    margin: 30px;
+    justify-content: space-around;
+  }
+}

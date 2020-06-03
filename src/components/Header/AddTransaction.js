@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addItem } from '../actions';
+import { addItem } from '../../actions';
 import { v1 as uuidv1 } from 'uuid';
 import './AddTransaction.scss';
 

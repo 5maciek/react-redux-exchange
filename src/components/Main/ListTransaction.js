@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemTransaction from './ItemTransaction.js';
-import { removeItem } from '../actions';
+import { removeItem } from '../../actions';
 import { connect } from 'react-redux';
 import './ListTransaction.scss';
 
