@@ -1,178 +1,20 @@
 import React from 'react';
 import './ListTransaction.scss';
 
-function ItemTransaction() {
+function ItemTransaction(props) {
+  const { id, name, euroAmount, plnAmount } = props.item;
   return (
-    <>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-      <li key="1" className="ItemTransaction">
-        <span>1.</span>
-        <p className="name">Tranzakcja 1</p>
-        <p>
-          Euro <span>1123</span>
-        </p>
-        <p>
-          Pln <span>11123</span>
-        </p>
-        <button>X</button>
-      </li>
-    </>
+    <li className="ItemTransaction">
+      <span>{props.index + 1}</span>
+      <p className="name">{name}</p>
+      <p>
+        Euro <span>{euroAmount}</span>
+      </p>
+      <p>
+        Pln <span>{plnAmount}</span>
+      </p>
+      <button onClick={() => props.handleRemove(id)}>X</button>
+    </li>
   );
 }
 
