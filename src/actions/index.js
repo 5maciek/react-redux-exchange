@@ -3,7 +3,7 @@ export const addItem = (item) => ({
   item,
 });
 
-export const removeItem = (item) => ({
+export const removeItem = (id) => ({
   type: 'REMOVE_TRANSACTION',
-  item,
+  id,
 });
