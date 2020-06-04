@@ -8,15 +8,18 @@ const INITIAL_STATE = {
 export const exchange = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_TRANSACTION:
+      console.log(action);
       return { ...state, transactions: [...state.transactions, action.transaction] };
     case REMOVE_TRANSACTION:
+      console.log(action);
       const filteredTransactions = state.transactions.filter(item => item.id !== action.id);
       return { ...state, transactions: filteredTransactions };
     case CHANGE_CURRENCY_VALUE:
-      const newCalculations = state.transactions.map(item => {
-        return { ...item, plnAmount: item.euroAmount * action.newValue }
-      });
-      return { ...state, currentCurrencyValue: action.newValue, transactions: newCalculations };
+      // console.log(action);
+      // const newCalculations = state.transactions.map(item => {
+      //   return { ...item, plnAmount: item.euroAmount * action.newValue }
+      // });
+      return { ...state, currentCurrencyValue: action.newValue, transactions: action.transactions };
     default:
       return state;
   }
