@@ -4,7 +4,9 @@ import './HighTransaction.scss';
 
 function HighTransaction(props) {
   const { transactions } = props.transactions;
-  transactions.sort((a, b) => b.euroAmount - a.euroAmount);
+
+  const copyTransaction = [...transactions];
+  copyTransaction.sort((a, b) => b.euroAmount - a.euroAmount);
 
   return (
     <div className="highTransaction">
@@ -12,12 +14,14 @@ function HighTransaction(props) {
       <div className="form">
         <div className="inputValue">
           <p className="description">Name:</p>
-          <span>{transactions.length > 0 ? transactions[0].name : ''}</span>
+          <span>
+            {copyTransaction.length > 0 ? copyTransaction[0].name : ''}
+          </span>
         </div>
         <div className="inputValue">
           <p className="description">Amount in euro:</p>
           <span>
-            {transactions.length > 0 ? transactions[0].euroAmount : ''}
+            {copyTransaction.length > 0 ? copyTransaction[0].euroAmount : ''}
           </span>
         </div>
         <div className="inputValue">
