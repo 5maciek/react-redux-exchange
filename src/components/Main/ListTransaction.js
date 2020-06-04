@@ -7,14 +7,19 @@ import './ListTransaction.scss';
 function ListTransaction(props) {
   const handleRemoveTransaction = (id) => {
     props.remove_Item(id);
-  }
+  };
 
-  const { transactions } = props.transactions;  
+  const { transactions } = props.transactions;
   return (
     <div className="listTransaction">
       <ul>
         {transactions.map((transaction, index) => (
-          <ItemTransaction key={transaction.id} transaction={transaction} index={index} handleRemove = {handleRemoveTransaction} />
+          <ItemTransaction
+            key={transaction.id}
+            transaction={transaction}
+            index={index}
+            handleRemove={handleRemoveTransaction}
+          />
         ))}
       </ul>
     </div>

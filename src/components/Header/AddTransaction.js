@@ -20,8 +20,7 @@ function AddTransaction(props) {
       props.add_Item(transaction);
       setInputName('');
       setEuroAmount(0);
-    }
-    else {
+    } else {
       alert('Please fill all fields');
     }
   };

@@ -1,21 +1,21 @@
 div.totalTransaction {
   width: 95%;
   margin: 2% auto 10px auto;
-  border-top: 2px solid white; 
+  border-top: 2px solid white;
 
   div.displayTotal {
     margin-left: 70%;
     width: 220px;
-    
-    p.totalName {       
+
+    p.totalName {
       display: flex;
       justify-content: space-between;
       font-size: 1.5rem;
       color: white;
     }
 
-    span.totalValue{
-      margin-left: 20px;    
+    span.totalValue {
+      margin-left: 20px;
     }
   }
 }

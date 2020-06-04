@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +14,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -24,7 +26,7 @@ div.App {
   header {
     width: 95%;
     display: flex;
-    margin: 20px 0 2% 3%;    
+    margin: 20px 0 2% 3%;
   }
 
   main {
