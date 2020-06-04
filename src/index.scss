@@ -22,11 +22,14 @@ code {
 
 div.App {
   header {
+    width: 95%;
     display: flex;
-    margin: 20px 0 40px 100px;    
+    margin: 20px 0 2% 3%;    
   }
 
   main {
-    margin-left: 100px;
+    height: 55vh;
+    min-height: 400px;
+    margin-left: 3%;
   }
 }
